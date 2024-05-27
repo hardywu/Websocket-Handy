@@ -8,22 +8,6 @@
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
   </PropertyGroup>
 
-  <Choose>
-    <When Condition=" '$(Configuration)'=='Release' ">
-      <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-        <RunAOTCompilation>true</RunAOTCompilation>        
-        <PublishTrimmed>true</PublishTrimmed>
-        <TrimMode>link</TrimMode>
-        <InvariantGlobalization>true</InvariantGlobalization>
-        <EmccCompileOptimizationFlag>-O3</EmccCompileOptimizationFlag>
-        <EmccLinkOptimizationFlag>-O3</EmccLinkOptimizationFlag>
-        <DebugType>none</DebugType>
-        <PublishReadyToRun>true</PublishReadyToRun>
-        <Optimize>true</Optimize>
-      </PropertyGroup>
-    </When>
-  </Choose>      
-
   <ItemGroup>
     <Folder Include="Models\" />
     <AvaloniaResource Include="Assets\**" />
