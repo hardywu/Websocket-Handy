@@ -13,7 +13,7 @@
       <PropertyGroup Condition="'$(Configuration)' == 'Release'">
         <RunAOTCompilation>true</RunAOTCompilation>        
         <PublishTrimmed>true</PublishTrimmed>
-        <TrimMode>full</TrimMode>
+        <TrimMode>link</TrimMode>
         <InvariantGlobalization>true</InvariantGlobalization>
         <EmccCompileOptimizationFlag>-O3</EmccCompileOptimizationFlag>
         <EmccLinkOptimizationFlag>-O3</EmccLinkOptimizationFlag>
@@ -27,7 +27,7 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <AvaloniaResource Include="Assets\**" />
-  </ItemGroup>
+  </ItemGroup>      
 
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="11.0.10" />
