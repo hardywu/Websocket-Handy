@@ -50,7 +50,7 @@ public class MainWindowViewModel : ViewModelBase
     public ReactiveCommand<Unit, Unit> SendMsg { get; }
     private void SendMsgTask()
     {
-        Logs += Msg;
+        Logs += $"Broadcast: {Msg}\n";
         _wssv?.WebSocketServices.Broadcast(Msg);
         Msg = "";
     }
